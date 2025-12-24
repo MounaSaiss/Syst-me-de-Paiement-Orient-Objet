@@ -3,12 +3,14 @@ class Client{
     private int $id;
     private string $name;
     private string $email;
+    private array $commendes;
 
-public function __construct($id,$name,$email)
+public function __construct(int $id, string $name,string $email,array $commendes)
 {
     $this->id=$id;
     $this->name=$name;
     $this->email=$email;
+    $this->commendes=$commendes;
 }
 public function set_id($id){
     $this->id=$id;

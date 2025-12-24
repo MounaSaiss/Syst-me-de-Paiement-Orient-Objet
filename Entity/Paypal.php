@@ -1,5 +1,5 @@
 <?php
-class Carte_bancaire extends Paiment{
+class Paypal extends Paiment{
     private int $CompteNumber;
     private string $userName;
 

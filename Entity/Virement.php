@@ -1,5 +1,5 @@
 <?php
-class Carte_bancaire extends Paiment{
+class Virement extends Paiment{
     private int $reference;
     private string $fromName;
 

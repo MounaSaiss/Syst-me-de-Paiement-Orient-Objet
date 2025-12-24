@@ -1,5 +1,6 @@
 <?php
-abstract class Paiment{
+
+abstract class Paiment {
     protected int $id;
     protected float $montant;
     protected string $statu;

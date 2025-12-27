@@ -21,5 +21,25 @@ class CommandeRepository
             ':statut' => $command->get_statu(),
             ':client_id' => $command->get_cleint()->get_id(),
         ]);
-    }    
+    } 
+    
+    public function all() : array
+    {
+        $query = "SELECT * FROM commendes ";
+
+        $stmt=$this->database->getConnection()->prepare($query);
+
+        $stmt->execute();
+
+        $result = $stmt->fetchAll();
+        
+        $Commandes = [];
+
+        foreach($result as $Commande) {
+            $Commandes[] = new Commande($Commande['id'], $Commande['montant_totale'], $Commande['statut'],$Commande['client_id']);
+        }
+        return $Commandes;
+        // var_dump($Commandes);
+    }
+    
 }

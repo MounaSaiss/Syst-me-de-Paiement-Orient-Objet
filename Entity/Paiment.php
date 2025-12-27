@@ -7,11 +7,10 @@ abstract class Paiment {
     protected DateTime $datePaiment;
     protected Commande $commande;
 
-    public function __construct($id,$montant,$statu,$datePaiment,$commande) {
-        $this->id = $id;
+    public function __construct($montant,$statu,$commande) {
         $this->montant=$montant;
         $this->statu=$statu;
-        $this->datePaiment=$datePaiment;
+        $this->datePaiment=new DateTime();
         $this->commande=$commande;
     }
     public function set_id($id){

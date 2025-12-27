@@ -36,7 +36,6 @@ class ClientRepository
         foreach($result as $item) {
             $clients[] = new Client($item['id'], $item['nom'], $item['email']);
         }
-
         return $clients;
     }
 

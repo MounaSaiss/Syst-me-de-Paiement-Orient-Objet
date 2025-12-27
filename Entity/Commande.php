@@ -7,13 +7,17 @@ class Commande
     private string $montant;
     private string $statu;
     private Client $client;
+    public const STATU_EN_ATTENTE="en attente";
+    public const STATU_ANNULER="échouer";
+    public const STATU_PAYE="payer";
+
 
     public function __construct(int | null $id, $montant, $statu, $client)
     {
         $this->id = $id;
         $this->montant = $montant;
         $this->statu = $statu;
-        $this->client = $client;
+        // $this->client = $client;
     }
     public function set_id($id)
     {
@@ -42,5 +46,8 @@ class Commande
     public function get_cleint(): Client
     {
         return $this->client;
+    }
+    public function set_status(){
+    
     }
 }
